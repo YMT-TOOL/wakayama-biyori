@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>わかやま日和｜和歌山のイベント情報</title>
+  <meta name="description" content="和歌山市・岩出市・紀の川市・海南市・有田市のイベントを、日付・地域・カテゴリーから探せる地域イベントサイトです。">
+  <meta name="theme-color" content="#f66b35">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://ymt-tool.github.io/wakayama-biyori/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="わかやま日和">
+  <meta property="og:title" content="わかやま日和｜和歌山のイベント情報">
+  <meta property="og:description" content="和歌山5市の楽しいイベントを、かんたん検索。">
+  <meta property="og:url" content="https://ymt-tool.github.io/wakayama-biyori/">
+  <meta property="og:image" content="https://ymt-tool.github.io/wakayama-biyori/assets/instagram-profile-wakayama-biyori-v2.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="わかやま日和｜和歌山のイベント情報">
+  <meta name="twitter:description" content="和歌山5市の楽しいイベントを、かんたん検索。">
+  <meta name="twitter:image" content="https://ymt-tool.github.io/wakayama-biyori/assets/instagram-profile-wakayama-biyori-v2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json" id="structured-data"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="わかやま日和 トップ">
+      <span class="brand-mark" aria-hidden="true">わ</span>
+      <span><b>わかやま日和</b><small>WAKAYAMA EVENT GUIDE</small></span>
+    </a>
+    <nav aria-label="メインメニュー">
+      <a href="#events">イベントを探す</a>
+      <a href="#about">このサイトについて</a>
+      <button class="post-link" type="button" id="post-button">イベントを掲載する</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">今日は、どこへ行こう？</p>
+        <h1>和歌山の<span>たのしい</span>を<br>見つけよう。</h1>
+        <p>まちの小さな催しから、家族で楽しむ大きなお祭りまで。<br>5つのまちの旬なイベントを集めました。</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <span class="sun">☀</span><span class="orange orange-one">●</span><span class="orange orange-two">●</span>
+        <div class="mountains"><i></i><i></i><i></i></div>
+        <span class="wave">〰〰〰</span>
+      </div>
+      <form class="hero-search" id="search-form" role="search">
+        <label for="search-input">イベントを検索</label>
+        <div><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="イベント名・場所・キーワード" autocomplete="off"><button type="submit">検索する</button></div>
+      </form>
+    </section>
+
+    <section class="events-section" id="events">
+      <div class="section-heading">
+        <div><p>EVENT CALENDAR</p><h2>イベントを探す</h2></div>
+        <p>気になる条件を選んで、ぴったりのイベントを見つけてください。</p>
+      </div>
+
+      <div class="month-nav" aria-label="表示する月">
+        <button id="prev-month" type="button" aria-label="前の月">←</button>
+        <h3 id="month-title">2026年8月</h3>
+        <button id="next-month" type="button" aria-label="次の月">→</button>
+      </div>
+
+      <div class="filter-panel">
+        <fieldset><legend>まちで絞る</legend><div class="chips" id="city-filters"></div></fieldset>
+        <fieldset><legend>ジャンルで絞る</legend><div class="chips category-chips" id="category-filters"></div></fieldset>
+        <button class="reset-button" id="reset-filters" type="button">条件をクリア</button>
+      </div>
+
+      <div class="results-bar">
+        <p><strong id="result-count">0</strong>件のイベント</p>
+        <label><input type="checkbox" id="favorites-only"> お気に入りのみ</label>
+      </div>
+      <div class="event-list" id="event-list" aria-live="polite"></div>
+    </section>
+
+    <section class="source-section" aria-labelledby="source-title">
+      <div class="section-heading"><div><p>INFORMATION SOURCES</p><h2 id="source-title">地域の情報源</h2></div><p>公式サイト・施設情報・公式SNSを横断してイベントを探しています。</p></div>
+      <div class="source-grid">
+        <article><span>🎭</span><h3>文化ホール</h3><p>県民文化会館、市内文化会館、ビッグホエール、ビッグ愛</p></article>
+        <article><span>🎨</span><h3>美術館・映画館</h3><p>県立近代美術館、博物館、ジストシネマ和歌山</p></article>
+        <article><span>🛍️</span><h3>商業施設</h3><p>イオンモール、イズミヤ、カインズ、フォレストモール、オークワ</p></article>
+        <article><span>🍊</span><h3>道の駅・市場</h3><p>浜のうたせ、青洲の里、海南サクアス、地域の市場</p></article>
+        <article><span>👪</span><h3>子育て・遊び場</h3><p>和歌山市子育てイベント、岩出市カレンダー、紀の川市イベント一覧、有田市カレンダー</p></article>
+        <article><span>🎡</span><h3>マリーナシティ</h3><p>ポルトヨーロッパ、黒潮市場、花火、ショー、季節イベント</p></article>
+        <article><span>📱</span><h3>お店・SNS</h3><p>店舗、商店街、マルシェ主催者の公式Instagram</p></article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <p class="eyebrow">ABOUT US</p><h2>まちの「行きたい」を、もっと近くに。</h2>
+      <p>わかやま日和は、和歌山市・岩出市・紀の川市・海南市・有田市のイベント情報を集めた地域ガイドです。掲載内容は公式情報をご確認のうえ、お出かけください。</p>
+    </section>
+  </main>
+
+  <footer><div class="brand footer-brand"><span class="brand-mark">わ</span><span><b>わかやま日和</b><small>WAKAYAMA EVENT GUIDE</small></span></div><p>© 2026 YMT</p></footer>
+
+  <dialog id="event-dialog"><button class="dialog-close" type="button" aria-label="閉じる">×</button><div id="dialog-content"></div></dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>

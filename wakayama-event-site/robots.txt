@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ymt-tool.github.io/wakayama-biyori/sitemap.xml
